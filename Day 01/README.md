@@ -6,10 +6,12 @@ def hello():
     print("Hello, World!")
 ```
 
-# Ethical Hacking Course Notes
+# EthicalHacking Notes - Day 01
+*Date:* 15/07/2025 
+*Duration:* 2 hours  
+*Focus:* Introduction To Cyber Security
 
-## Class 1 - Introduction to Ethical Hacking (2 Hours)
-
+---
 ### What is Ethical Hacking?
 
 Ethical hacking, also known as penetration testing or white-hat hacking, is the practice of intentionally probing systems, networks, and applications to find security vulnerabilities before malicious attackers do.
@@ -20,22 +22,96 @@ Ethical hacking, also known as penetration testing or white-hat hacking, is the 
 - **Responsible disclosure**: Report vulnerabilities to appropriate parties
 - **Legal compliance**: Follow all applicable laws and regulations
 
-### Types of Hackers
+### Core Principles (CIA Triad):
+- *Confidentiality*: Ensuring information is accessible only to authorized individuals
+- *Integrity*: Maintaining accuracy and completeness of data
+- *Availability*: Ensuring systems and data are accessible when needed
 
-1. **White Hat Hackers (Ethical Hackers)**
-   - Work to improve security
-   - Have proper authorization
-   - Follow responsible disclosure
+---
 
-2. **Black Hat Hackers (Malicious Hackers)**
-   - Exploit systems for personal gain
-   - Cause damage or steal data
-   - Act without permission
+## 🛡 Three Major Divisions of Cyber Security Teams
 
-3. **Grey Hat Hackers**
-   - Fall between white and black hat
-   - May find vulnerabilities without permission but don't cause harm
-   - Often notify organizations of findings
+### 1. *Red Team* 🔴
+- *Role*: Offensive security (Attackers)
+- *Focus*: Simulating real-world attacks to find vulnerabilities
+- *Activities*: Penetration testing, social engineering, exploit development
+- *Skills*: Ethical hacking, vulnerability assessment, attack simulation
+- *Goal*: Think like attackers to identify weaknesses before malicious hackers do
+
+### 2. *Blue Team* 🔵
+- *Role*: Defensive security (Defenders)
+- *Focus*: Protecting, monitoring, and responding to security threats
+- *Activities*: Security monitoring, incident response, threat hunting, forensics
+- *Skills*: SIEM management, log analysis, incident handling, network defense
+- *Goal*: Detect, prevent, and respond to security incidents
+
+### 3. *Purple Team* 🟣
+- *Role*: Collaborative security (Bridge between Red and Blue)
+- *Focus*: Combining offensive and defensive approaches
+- *Activities*: Coordinating red/blue exercises, sharing threat intelligence, continuous improvement
+- *Skills*: Both offensive and defensive techniques, communication, strategic planning
+- *Goal*: Maximize security effectiveness through collaboration and knowledge sharing
+
+---
+
+## 👥 Types of Hackers
+
+### White Hat Hackers (Ethical Hackers)
+- Work with permission to find and fix vulnerabilities
+- Follow legal and ethical guidelines
+- Help organizations improve security
+
+### Black Hat Hackers (Malicious Hackers)
+- Exploit vulnerabilities for personal gain
+- Operate without permission
+- May cause damage or steal data
+
+### Grey Hat Hackers
+- Fall between white and black hat
+- May discover vulnerabilities without permission but don't exploit maliciously
+- Often notify organizations about findings
+
+### Red Hat Hackers
+- Vigilante hackers who target black hat hackers
+- Use aggressive methods to stop malicious activities
+- Often work to take down black hat operations
+
+### Script Kiddies
+- Use existing tools and scripts created by others
+- Limited technical knowledge and skills
+- Often motivated by curiosity or showing off rather than malicious intent
+
+### Hacktivists
+- Hack for political or social causes
+- Target organizations they oppose ideologically
+- Examples: Anonymous, WikiLeaks operations
+
+### State-Sponsored Hackers
+- Government-backed cyber operatives
+- Conduct cyber espionage and warfare
+- Well-funded with advanced capabilities and resources
+
+### Cyber Terrorists
+- Use cyber attacks to cause fear and disruption
+- Target critical infrastructure and essential services
+- Motivated by ideological or political extremism
+
+---
+## 🌐 Types of Cybersecurity Threats
+
+- *Phishing*: Fraudulent communications designed to steal sensitive information like usernames, passwords, and credit card details
+
+- *Ransomware*: Malicious software that encrypts victim's files and demands payment for decryption
+
+- *Malware*: General term for malicious software including viruses, worms, trojans, and spyware
+
+- *Social Engineering*: Psychological manipulation techniques used to trick people into divulging confidential information
+
+- *Man-in-the-Middle (MitM)*: Intercepting and potentially altering communications between two parties
+
+- *Zero-Day Attack*: Exploiting previously unknown vulnerabilities before patches are available
+
+---
 
 ### Phases of Ethical Hacking
 
@@ -67,14 +143,14 @@ Ethical hacking, also known as penetration testing or white-hat hacking, is the 
 - Risk assessment
 - Recommendations for remediation
 - Executive summary for management
-
+---
 ### Essential Tools for Ethical Hackers
 
 #### Operating Systems
 - **Kali Linux**: Penetration testing distribution
 - **Virual Box**: Safe environment for testing your hacking skills and running linux
 - **Windows**: For Windows-specific testing
-
+---
 ### Cryptography Basics
 
 #### Key Concepts
@@ -89,14 +165,14 @@ Ethical hacking, also known as penetration testing or white-hat hacking, is the 
   - TLS: Transport Layer Security (current standard)
 - **HTTPS**: HTTP over TLS/SSL
 - **SSH**: Secure Shell for remote access
-
+---
 ### SCADA and Industrial Control Systems
 
 #### What is SCADA?
 - **SCADA**: Supervisory Control and Data Acquisition (For more info watch youtube videos)
 - Used in critical infrastructure (power grids, water treatment, manufacturing)
 - **SCADA Programmer**: Develops software for monitoring and controlling industrial processes
-
+---
 # Zero Day Attack
 
 ## Definition
@@ -133,7 +209,7 @@ A zero day attack is a cyber attack that exploits a previously unknown vulnerabi
 - WannaCry (2017): Used Windows SMB vulnerability
 - Various browser and operating system exploits
 - For more info watch the netflix movie on Zero day
-
+---
 # WhatsApp Encryption
 
 ## Primary Encryption Protocol
@@ -158,32 +234,15 @@ WhatsApp uses the **Signal Protocol** (formerly TextSecure Protocol) for end-to-
 - **X3DH (Extended Triple Diffie-Hellman)**: Initial key agreement protocol
 - **Prekey bundles**: Allow secure communication even when recipient is offline
 - **Identity keys**: Long-term cryptographic identity for each user
+---
+## Important Acronyms and Full Forms
 
-### Forward Secrecy
-- New encryption keys generated for each message
-- Compromising one key doesn't affect other messages
-- Old keys are automatically deleted
-
-### Authentication
-- Safety numbers (QR codes/60-digit codes) verify encryption keys
-- Prevents man-in-the-middle attacks
-- Users can verify each other's identity
-
-## What's Protected
-- Message content
-- Voice and video calls
-- Media files (photos, videos, documents)
-- Status updates
-- Group messages
-
-## What's Not Encrypted
-- Metadata (who, when, frequency of communication)
-- Profile information
-- Contact lists
-- Backup files (unless backup encryption is enabled)
-
-## Limitations
-- Metadata collection by WhatsApp/Meta
-- Potential vulnerabilities in implementation
-- No protection against endpoint compromise
-- Backup encryption is optional and not default
+*VAPT*: Vulnerability Assessment and Penetration Testing  
+*IPS*: Intrusion Prevention System  
+*IDS*: Intrusion Detection System  
+*POC*: Proof of Concept  
+*SOC*: Security Operations Center  
+*SIEM*: Security Information and Event Management  
+*SAAS*: Software as a Service  
+*SSL*: Secure Sockets Layer  
+*TLS*: Transport Layer Security  
