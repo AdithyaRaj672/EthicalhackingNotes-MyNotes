@@ -68,25 +68,6 @@ Ethical hacking, also known as penetration testing or white-hat hacking, is the 
 - Recommendations for remediation
 - Executive summary for management
 
-### Legal and Ethical Considerations
-
-#### Legal Framework
-- **Computer Fraud and Abuse Act (CFAA)** - US federal law
-- **Data Protection regulations** (GDPR, CCPA)
-- **Industry-specific regulations** (HIPAA, PCI-DSS)
-
-#### Ethical Guidelines
-- Only test systems you own or have explicit permission to test
-- Do not cause damage or disruption
-- Respect privacy and confidentiality
-- Report vulnerabilities responsibly
-
-#### Network Security Issues
-- Unencrypted communications
-- Weak authentication mechanisms
-- Unnecessary open ports
-- Outdated software and systems
-
 ### Essential Tools for Ethical Hackers
 
 #### Operating Systems
@@ -115,3 +96,94 @@ Ethical hacking, also known as penetration testing or white-hat hacking, is the 
 - **SCADA**: Supervisory Control and Data Acquisition (For more info watch youtube videos)
 - Used in critical infrastructure (power grids, water treatment, manufacturing)
 - **SCADA Programmer**: Develops software for monitoring and controlling industrial processes
+
+# Zero Day Attack
+
+## Definition
+A zero day attack is a cyber attack that exploits a previously unknown vulnerability in software or hardware before developers have had time to create and distribute a security patch.
+
+## Key Characteristics
+- **Unknown vulnerability**: The security flaw is not publicly known or documented
+- **No available patch**: Developers haven't released a fix for the vulnerability
+- **Zero days to respond**: Organizations have "zero days" to defend against the attack once it's discovered
+- **High success rate**: Attacks often succeed because there are no existing defenses
+
+## Attack Process
+1. **Discovery**: Attacker finds an unknown vulnerability
+2. **Exploitation**: Develops code to exploit the vulnerability
+3. **Deployment**: Launches the attack against target systems
+4. **Detection**: Security researchers or vendors eventually discover the attack
+5. **Patching**: Developers create and release a security update
+
+## Why They're Dangerous
+- Difficult to detect with traditional security measures
+- Can cause significant damage before being discovered
+- Often used in advanced persistent threats (APTs)
+- High value on black markets due to their effectiveness
+
+## Defense Strategies
+- **Behavioral analysis**: Monitor for unusual system behavior
+- **Sandboxing**: Isolate suspicious files and processes
+- **Regular updates**: Keep all software current with latest patches
+- **Network segmentation**: Limit potential damage scope
+- **Threat intelligence**: Stay informed about emerging threats
+
+## Notable Examples
+- Stuxnet (2010): Targeted industrial control systems
+- WannaCry (2017): Used Windows SMB vulnerability
+- Various browser and operating system exploits
+- For more info watch the netflix movie on Zero day
+
+# WhatsApp Encryption
+
+## Primary Encryption Protocol
+WhatsApp uses the **Signal Protocol** (formerly TextSecure Protocol) for end-to-end encryption, developed by Open Whisper Systems.
+
+## Key Features
+
+### End-to-End Encryption (E2EE)
+- Messages are encrypted on sender's device and only decrypted on recipient's device
+- WhatsApp servers cannot read message content
+- Applies to text messages, voice calls, video calls, photos, videos, and documents
+
+### Cryptographic Components
+- **AES-256**: Symmetric encryption for message content
+- **Curve25519**: Elliptic curve cryptography for key exchange
+- **HMAC-SHA256**: Message authentication
+- **Double Ratchet Algorithm**: Provides forward secrecy and future secrecy
+
+## Security Mechanisms
+
+### Key Exchange
+- **X3DH (Extended Triple Diffie-Hellman)**: Initial key agreement protocol
+- **Prekey bundles**: Allow secure communication even when recipient is offline
+- **Identity keys**: Long-term cryptographic identity for each user
+
+### Forward Secrecy
+- New encryption keys generated for each message
+- Compromising one key doesn't affect other messages
+- Old keys are automatically deleted
+
+### Authentication
+- Safety numbers (QR codes/60-digit codes) verify encryption keys
+- Prevents man-in-the-middle attacks
+- Users can verify each other's identity
+
+## What's Protected
+- Message content
+- Voice and video calls
+- Media files (photos, videos, documents)
+- Status updates
+- Group messages
+
+## What's Not Encrypted
+- Metadata (who, when, frequency of communication)
+- Profile information
+- Contact lists
+- Backup files (unless backup encryption is enabled)
+
+## Limitations
+- Metadata collection by WhatsApp/Meta
+- Potential vulnerabilities in implementation
+- No protection against endpoint compromise
+- Backup encryption is optional and not default
