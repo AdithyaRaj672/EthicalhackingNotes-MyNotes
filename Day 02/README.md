@@ -1,18 +1,19 @@
+
 # Kali Linux Pre-built VM Installation Guide for Windows
 
 ## Prerequisites
 
 ### System Requirements
 - Windows 10/11 (64-bit recommended)
-- Minimum 4GB RAM (8GB+ recommended)
+- Minimum 8GB RAM (16GB+ recommended)
 - At least 25GB free disk space
 - Virtualization enabled in BIOS/UEFI
 - Stable internet connection
 
 ### Required Downloads
-1. **VirtualBox** - Latest version from Oracle VirtualBox website
-2. **VirtualBox Extension Pack** - Matches VirtualBox version
-3. **Kali Linux Pre-built VM** - From official Kali Linux downloads page
+1. **VirtualBox** - Latest version from Oracle VirtualBox website `https://www.virtualbox.org/wiki/Downloads`
+2. **7-Zip** - Download from the the official website for unpacking the Kali file `https://www.7-zip.org/`
+3. **Kali Linux Pre-built VM** - From official Kali Linux downloads page `https://www.kali.org/get-kali/#kali-virtual-machines`
 
 ## Step 1: Installing VirtualBox on Windows
 
@@ -20,55 +21,23 @@
 1. Download VirtualBox installer (.exe) from official Oracle website
 2. Run installer as Administrator
 3. Accept default installation settings
-4. Install Oracle VM VirtualBox Extension Pack after main installation
-5. Restart Windows after installation completes
-
-### Post-Installation Verification
-- Open VirtualBox Manager
-- Check that version matches downloaded Extension Pack
-- Verify "File → Preferences → Extensions" shows Extension Pack installed
+4. Open windows after installation type **add features**
+5. Turn on the features **Virtual Machine Platform** and **Windows Hypervision Platform**
+6. Restart Windows after installation and adding the features completes
 
 ## Step 2: Downloading Kali Linux Pre-built VM
 
 ### Download Options
 1. Visit official Kali Linux downloads page
-2. Navigate to "Virtual Machines" section
-3. Download VirtualBox (.vdi) version
-4. File size typically 3-4GB compressed
-
-### File Verification
-- Verify SHA256 checksum if provided
-- Use Windows PowerShell: `Get-FileHash -Algorithm SHA256 filename.7z`
+2. Navigate to **Virtual Machines** section
+3. Download VirtualBox version
+4. File size typically 3.3GB compressed
 
 ## Step 3: Setting Up Kali VM in VirtualBox
-
-### Creating New Virtual Machine
-1. Open VirtualBox Manager
-2. Click "New" button
-3. Configure VM settings:
-   - **Name**: Kali Linux
-   - **Type**: Linux
-   - **Version**: Debian (64-bit)
-   - **Memory**: 2048MB minimum (4096MB recommended)
-
-### VM Configuration
-1. **Storage Configuration**:
-   - Select "Use an existing virtual hard disk file"
-   - Browse and select extracted Kali .vdi file
-   
-2. **System Settings**:
-   - **Motherboard**: Enable EFI if available
-   - **Processor**: Assign 2+ CPU cores
-   - **Acceleration**: Enable VT-x/AMD-V and Nested Paging
-
-3. **Display Settings**:
-   - Video Memory: 128MB
-   - Enable 3D Acceleration
-   - Graphics Controller: VBoxSVGA
-
-4. **Network Settings**:
-   - Adapter 1: NAT (default)
-   - Consider Host-only or Bridged for specific needs
+1. Unzip the Kali file using 7 Zip 
+2. Open the Kali file
+3. Double click or open the **Virtual Box Machine File**
+4. You will be redirected to Virtual Box Application with Kali imported in it
 
 ## Step 4: First Boot and Initial Setup
 
@@ -83,7 +52,7 @@
 
 ### Initial Configuration Steps
 1. Update system: `sudo apt update && sudo apt upgrade -y`
-2. Change default password: `passwd`
+2. Change default password: `passwd` (Optional)
 3. Configure keyboard layout if needed
 4. Install VirtualBox Guest Additions (see troubleshooting section)
 
@@ -208,19 +177,3 @@
 2. Backup important files to host system
 3. Keep multiple snapshots for rollback capability
 4. Document custom configurations
-
-## Additional Resources
-
-### Official Documentation
-- Kali Linux Documentation
-- VirtualBox User Manual
-- Kali Tools Documentation
-
-### Community Support
-- Kali Linux Forums
-- VirtualBox Community Forums
-- Reddit r/Kalilinux
-
-## Conclusion
-
-This guide covers the complete installation and troubleshooting process for running Kali Linux VMs on Windows hosts using VirtualBox. Following these steps and solutions should resolve most common issues encountered during installation and daily usage. Remember to always keep both your host system and VM updated for optimal performance and security.
