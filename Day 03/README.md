@@ -1,12 +1,10 @@
-# Ethical Hacking Class Notes - Kali Linux & Villain
+# EthicalHacking Notes - Day 03
+**Date:** 21/07/2025
 
-## Date: [Insert Date]
-## Topic: Kali Linux Basic Functions & Villain Installation
+**Duration:** 2 hours  
 
+**Focus:**  Kali Linux & Villain
 ---
-
-## Kali Linux Basic Functions
-
 ### What is Kali Linux?
 - Debian-based Linux distribution designed for digital forensics and penetration testing
 - Pre-installed with numerous security tools and utilities
