@@ -71,7 +71,7 @@ Available IPs: 192.168.1.1 to 192.168.1.254
 | **Checksum** | Present in header | No checksum in header |
 | **Broadcasting** | Supported | Not supported (uses multicast) |
 
-### IPv4 Example: `192.168.1.100`
+### IPv4 Example: `192.168.56.20`
 ### IPv6 Example: `2001:0db8:85a3:0000:0000:8a2e:0370:7334`
 
 ---
