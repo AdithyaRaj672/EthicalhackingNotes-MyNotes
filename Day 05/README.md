@@ -1,5 +1,11 @@
-# Ethical Hacking Day 4 - Networking Fundamentals & Nmap Commands
+# EthicalHacking Notes - Day 04
+**Date:** 21/07/2025
 
+**Duration:** 2 hours  
+
+**Focus:** Networking Fundamentals & Nmap Commands
+
+---
 ## 📡 What is a Network?
 
 A **network** is a collection of interconnected devices (computers, servers, routers, switches, etc.) that can communicate and share resources with each other. Networks enable data transmission, resource sharing, and communication between different systems.
